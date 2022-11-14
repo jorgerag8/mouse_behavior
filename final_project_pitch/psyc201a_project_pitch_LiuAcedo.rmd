@@ -1,0 +1,45 @@
+---
+title: 'PSYC 201A: Final Project Pitch'
+author: "Jiaqi Liu, Jorge Acedo"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# PSYC 201A Final Project Pitch
+
+In most cases, as part of the final project you will have conducted a reproducibility study of a published set of findings in the psychology literature. Conducting that study will involve getting practice downloading datasets associated with published work, exploring those datasets to discover patterns, and fitting statistical models that describe these patterns mathematically. You’ll also have the opportunity to communicate your findings as part of your final report and flash talk.
+
+Please note that if you have other ideas about what you would like to focus on in your final project (e.g., that is especially relevant to your research interests), please describe them in detail as part of your pitch so that the teaching team can provide you with feedback about how to proceed. 
+
+When you begin working on this assignment, please rename this file by replacing the suffix `_template.rmd` with `_LastName1LastName2.rmd`, where `LastName1` corresponds to one author, and `LastName1` corresponds to a second author, if applicable. There is no special meaning to being the "first" or "second" author. All team members will receive the same grade and credit for this final project. When you are finished writing your responses below, please knit this file to PDF and submit via Canvas. 
+
+## Author name(s)
+_This final project is meant to be conducted either individually or in pairs. On rare occasions, a group of three is permitted, but this group's project will be held to higher standards._
+
+* AUTHOR 1: Jorge Acedo Glaros
+* AUTHOR 2: Jiaqi Liu
+
+## Target article (if working with published data) or brief project description (if not working with published data)
+_If you are planning to work with published data, please provide the full APA reference for the paper you plan to base your reproducibility study on. If you are planning to work on unpublished data, please provide a concise but informative summary of the topic your proposed project addresses._
+
+Citation: Schreiner, D.C., Cazares, C., Renteria, R. et al. Information normally considered task-irrelevant drives decision-making and affects premotor circuit recruitment. Nat Commun 13, 2134 (2022). https://doi.org/10.1038/s41467-022-29807-2
+
+This project proposes to analyze the behavioral and neural time series data of mice taken from experiments conducted to examine their free-roam foraging behavior. 
+
+## Key research question and findings
+_If you are working from published data, please provide a brief summary of the paper, including the core research question and the key findings. If you are interested in working on unpublished data, please also describe what specific research question and analyses you plan to conduct, in as concrete terms as possible._
+
+The article analyses the continuous behavior of mice in a free-roam environment. Precisely, mice are placed into an operant box where if a lever is pressed for a certain threshold of duration (800ms) then the mouse is rewarded with sucrose or food pellets. Behavioral data is collected regarding the number of lever presses and the duration of each lever press. The article shows the ability of mice to increase the percentage of successful lever presses during a session and across sessions. Specifically, the authors found that the duration of the previous six lever presses has a statistically significant effect on the duration of the next lever press.
+
+We make the prior assumption that the mice in the study are conditioned to associate lever presses with reward, then a long duration between lever presses indicates a decrease in utility of reward for reasons or combinations thereof including but not limited to: 1. over-stimulation of reward thus reducing the desirability of reward, 2. There are competing factors in the environment that distract the mice from the reward. 
+
+Our question is whether the density of past successful lever presses has an effect on the duration until the next successful lever press. In particular, the features that we plan to examine in past behaviors are: the duration of each lever press, head entry per successful lever press, reward condition, duration between lever presses, and the moving average of each of the preceding independent variables. First, we plan to conduct feature selection via elastic net regression, then the results of which will be used in a linear mixed effects model to examine the effects of each independent variable with respect to the duration until the next successful lever press.
+
+## Link to dataset or other resources
+_Please provide a link to either download the published dataset you plan to work with, or any other resources you are planning to use to base your project on._
+
+The dataset for the published paper is currently only available via a private repository.
