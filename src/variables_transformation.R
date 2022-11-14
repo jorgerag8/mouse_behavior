@@ -84,16 +84,20 @@ behavior = behavior %>%
          timestamp = ifelse(actions == 150, timestamp, NA))
 
 # Create percentage met, Overall % of presses that met criteria for a given session
- 
 behavior = behavior %>% 
   mutate(perc_met = mean(succ_lp, na.rm=TRUE),
          perc_met = ifelse(actions == 150, perc_met, NA)) %>% 
   ungroup()
 
-behavior %>% 
-  filter(Subject == 3736 & `Start Date` == '11/06/20') %>% 
+# Add trial id
+behavior = behavior %>% 
   group_by(Subject, MSN, `Start Date`, `Start Time`, threshold) %>% 
-  select(actions, time, succ_lp, perc_met)
+  mutate(trial_id = cur_group_id())
+  
+
+# Filter to stay just with lever presses and add trial id
+behavior_lp = behavior %>% 
+  filter(actions == 150)
 
 
 
