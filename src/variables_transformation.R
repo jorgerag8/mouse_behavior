@@ -99,6 +99,8 @@ behavior = behavior %>%
 behavior_lp = behavior %>% 
   filter(actions == 150)
 
+# Export data
+write_csv(behavior_lp, file = "../data/lme_data.csv")
 
 
   
