@@ -89,12 +89,23 @@ behavior = behavior %>%
          perc_met = ifelse(actions == 150, perc_met, NA)) %>% 
   ungroup()
 
-# Add trial id
+# Frequency rewards in the last n lever presses
 behavior = behavior %>% 
+  group_by(Subject, MSN, `Start Date`, `Start Time`, threshold, actions) %>% 
+  mutate(freq_rew3 = reduce(map(1:3, ~ lag(rew, ., NA)), `+`)/3,
+         freq_rew6 = reduce(map(1:6, ~ lag(rew, ., NA)), `+`)/6,
+         freq_rew10 = reduce(map(1:10, ~ lag(rew, ., NA)), `+`)/10) %>%
   group_by(Subject, MSN, `Start Date`, `Start Time`, threshold) %>% 
-  mutate(trial_id = cur_group_id())
+  mutate(ts = cumsum(time), 
+         aux = ifelse(actions == 200, ts, NA)) %>% 
+  fill(aux, .direction = "down") %>% 
+  mutate(t_r = ts - aux) %>%
+  mutate(t_r = ifelse(actions == 100, t_r, NA)) %>% 
+  fill(t_r, .direction = "down") %>% 
+  mutate(t_r = ifelse(actions == 150, t_r, NA)) %>% 
+  ungroup() %>% 
+  select(-aux, -ts)
   
-
 # Filter to stay just with lever presses and add trial id
 behavior_lp = behavior %>% 
   filter(actions == 150)
