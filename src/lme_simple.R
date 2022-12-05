@@ -91,6 +91,7 @@ x_freq = as.data.frame(effects_freq_rew10) %>%
          lower = lower*10,
          upper = upper*10)
 
+# Effect of frequency plot
 ggplot() + 
   #geom_point(data=df_lme_aug, aes(freq_rew10, time)) + 
   geom_point(data=x_freq, aes(x=freq_rew10, y=fit), color="blue") +
@@ -99,15 +100,14 @@ ggplot() +
   labs(x="Frequency of rewards in last 10 LP", y="Duration of next LP") +
   ggtitle("Effect of Frequency of Rewards in Duration of Next LP",)
 
-# first augmented vs second augmented
+# Simple vs second augmented
 # Get data into the same dimention
-
 df_lme_aug2 = df_lme %>% 
-  select(-c(actions:he_order)) %>% 
+  select(-c(actions:he_order, freq_rew3, freq_rew6, freq_rew10)) %>% 
   drop_na()
 
 # Estimate models
-aug1_lme = lmer(time ~ dur_n1 + dur_n2 + dur_n3 + dur_n4 + dur_n5 + dur_n6 + ma + he + 
+s2_lme = lmer(time ~ dur_n1 + dur_n2 + dur_n3 + dur_n4 + dur_n5 + dur_n6 + ma + he + 
                   dur_n1:he + ma:he + rew + dur_n1:rew + ma:rew + ipi + dur_n1:ipi +
                   ma:ipi +  ipi_n2 + dur_n2:ipi_n2 + timestamp + dur_n1:timestamp +
                   ma:timestamp + perc_met + dur_n1:perc_met + ma:perc_met + 
@@ -120,9 +120,27 @@ aug2_lme = lmer(time ~ dur_n1 + dur_n2 + dur_n3 + dur_n4 + dur_n5 + dur_n6 + ma 
                   ma:timestamp + perc_met + dur_n1:perc_met + ma:perc_met + 
                   t_r + (1 | Subject)  + (1 | `Start Date`), data = df_lme_aug2 )
 
+# t_r plot
+effects_t_r <- effects::effect(term = "t_r", mod= aug2_lme)
+summary(effects_t_r)
+
+# Save the effects values as a df:
+x_freq2 = as.data.frame(effects_t_r) %>% 
+  mutate(fit = fit*10,
+         lower = lower*10,
+         upper = upper*10)
+
+ggplot() + 
+  #geom_point(data=df_lme_aug, aes(freq_rew10, time)) + 
+  geom_point(data=x_freq2, aes(x=t_r, y=fit), color="blue") +
+  geom_line(data=x_freq2, aes(x=t_r, y=fit), color="blue") +
+  geom_ribbon(data=x_freq2, aes(x=t_r, ymin=lower, ymax=upper), alpha= 0.3, fill="blue") +
+  labs(x="Time (ms) since past reward", y="Duration of next LP") +
+  ggtitle("Effect of Time Since Past Reward in Duration of Next LP",)
+
 summary(aug2_lme)
 
-anova(aug1_lme, aug2_lme)
+anova(s2_lme, aug2_lme)
 
 # standard error of coefficient
 aug2_se <- sqrt(diag(vcov(aug2_lme)))[16]

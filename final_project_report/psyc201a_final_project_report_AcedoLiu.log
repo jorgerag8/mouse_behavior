@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.11)  1 DEC 2022 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.11)  4 DEC 2022 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -401,57 +401,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/Users/jorgerag/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 156.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 164.
 (/Users/jorgerag/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 156.
+(Font)              <10> on input line 164.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 156.
+(Font)              <7> on input line 164.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 156.
+(Font)              <5> on input line 164.
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 156.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 164.
 
-<../plots/model_effects.png, id=77, 1003.75pt x 803.0pt>
-File: ../plots/model_effects.png Graphic file (type png)
-<use ../plots/model_effects.png>
-Package pdftex.def Info: ../plots/model_effects.png  used on input line 226.
-(pdftex.def)             Requested size: 469.75618pt x 375.80495pt.
-[2]
-<../plots/freq_rew10_effect.png, id=95, 1204.5pt x 803.0pt>
+<../plots/freq_rew10_effect.png, id=79, 1204.5pt x 803.0pt>
 File: ../plots/freq_rew10_effect.png Graphic file (type png)
 <use ../plots/freq_rew10_effect.png>
-Package pdftex.def Info: ../plots/freq_rew10_effect.png  used on input line 233.
+Package pdftex.def Info: ../plots/freq_rew10_effect.png  used on input line 231.
 (pdftex.def)             Requested size: 469.75311pt x 313.16875pt.
-[3 <../plots/model_effects.png>]
+[2]
+<../plots/t_r_effect.png, id=97, 1204.5pt x 803.0pt>
+File: ../plots/t_r_effect.png Graphic file (type png)
+<use ../plots/t_r_effect.png>
+Package pdftex.def Info: ../plots/t_r_effect.png  used on input line 241.
+(pdftex.def)             Requested size: 469.75311pt x 313.16875pt.
+[3 <../plots/freq_rew10_effect.png>]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 247.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 256.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 251.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 255.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 264.
 
-[4 <../plots/freq_rew10_effect.png>] [5] (./psyc201a_final_project_report_AcedoLiu.aux)
+[4 <../plots/t_r_effect.png>] [5] (./psyc201a_final_project_report_AcedoLiu.aux)
 Package rerunfilecheck Info: File `psyc201a_final_project_report_AcedoLiu.out' has not changed.
 (rerunfilecheck)             Checksum: 823C0A874F353EDCD2BC8C32A5DA4BB8;1802.
  ) 
 Here is how much of TeX's memory you used:
- 10554 strings out of 476931
- 165610 string characters out of 5824419
- 511823 words of memory out of 5000000
+ 10556 strings out of 476931
+ 165601 string characters out of 5824419
+ 512823 words of memory out of 5000000
  31596 multiletter control sequences out of 15000+600000
  514885 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,6n,77p,648b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,77p,625b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/jorgerag/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on psyc201a_final_project_report_AcedoLiu.pdf (5 pages, 281009 bytes).
+Output written on psyc201a_final_project_report_AcedoLiu.pdf (5 pages, 297356 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
