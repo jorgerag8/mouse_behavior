@@ -45,13 +45,13 @@ Observational
 - Binary label that checks if a head entry happened in between class lever press n and n-1. [$HE_{-1}$]
 - Binary label that checks if past lever press was rewarded or not. [$R$]
 - Time in ms where a lever press occurred. [$t$]
-- Percentage of succesfull lever presses across the trial. [$\%MET$]
+- Percentage of successful lever presses across the trial. [$\%MET$]
 - Time passed since last reward. [$t\_R$]
 - Frequency of rewards in the last ten lever presses. [$freq\_R_{-10}$]
 
 ### Dependent variables
 
-The outcome variable of interest is the duration of the next leverpress.
+The outcome variable of interest is the duration of the next lever press.
 
 ### Data preprocessing
 
